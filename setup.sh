@@ -34,11 +34,12 @@ msg_info "[Task 2]"
 msg_warn "Installing microk8s on $VM_NAME"
 run_command_on_vm "$VM_NAME" "${HOST_DIR_NAME}/script/_configure.sh ${HOST_DIR_NAME}"
 
-sleep 30
+sleep 60
 
 msg_info "[Task 2]"
 msg_warn "Stop $VM_NAME"
 ${HOST_DIR_NAME}/stop.sh
+sleep 20
 msg_warn "Start $VM_NAME"
 ${HOST_DIR_NAME}/start.sh
 
